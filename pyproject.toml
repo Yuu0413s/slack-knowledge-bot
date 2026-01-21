@@ -1,0 +1,24 @@
+[tool.ruff]
+[tool.ruff.lint]
+[tool.ruff.format]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+log_file = "logs/pytest.log"
+log_file_level = "DEBUG"
+log_format = "%(asctime)s %(levelname)s %(message)s"
+log_date_format = "%Y-%m-%d %H:%M:%S"
+
+[dependency-groups]
+dev = [
+    "anthropic==0.75.0",
+    "google-cloud-aiplatform==1.132.0",
+    "google-genai>=1.59.0",
+    "google-generativeai>=0.8.6",
+    "openai==2.14.0",
+    "pytest>=9.0.2",
+    "python-dotenv>=1.2.1",
+    "ruff>=0.14.13",
+    "slack-bolt==1.27.0",
+    "slack-cli-hooks==0.2.0",
+]
